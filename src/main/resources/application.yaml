@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-async-demo
+  task:
+    execution:
+      thread-name-prefix: sasync-
+      pool:
+        core-size: 2
+        max-size: 8
+        queue-capacity: 10
+
+server:
+  port: 48792
+
+logging:
+  web: info
+  level:
+    root: info
+    cn.netbuffer: debug

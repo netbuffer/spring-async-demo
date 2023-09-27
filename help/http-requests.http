@@ -1,0 +1,5 @@
+### /async/taskNoReturnValue
+GET http://localhost:48792/async/taskNoReturnValue
+
+### /async/taskReturnValue
+GET http://localhost:48792/async/taskReturnValue
