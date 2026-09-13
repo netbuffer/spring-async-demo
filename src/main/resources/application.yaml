@@ -1,19 +1,21 @@
 spring:
   application:
     name: spring-async-demo
+  threads:
+    virtual:
+      enabled: true
   task:
     execution:
+      mode: force
       thread-name-prefix: sasync-
-      pool:
-        core-size: 2
-        max-size: 8
-        queue-capacity: 10
+      simple:
+        concurrency-limit: 100
 
 server:
   port: 48792
 
 logging:
-  web: info
   level:
     root: info
+    web: info
     cn.netbuffer: debug

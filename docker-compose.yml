@@ -1,0 +1,15 @@
+services:
+  spring-async-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: spring-async-demo
+    container_name: spring-async-demo
+    image: spring-async-demo:v4.1.1
+    ports:
+      - "48792:8080"
+    restart: "always"
+    environment:
+      TZ: Asia/Shanghai
+      SERVER_PORT: 8080
+      JAVA_OPTS: -Dinfo.tags.environment=prod

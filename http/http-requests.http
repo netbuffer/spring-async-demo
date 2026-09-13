@@ -1,0 +1,11 @@
+### 1. 触发无返回值异步任务（默认虚拟线程调度）
+GET {{host}}/async/taskNoReturnValue
+Accept: */*
+
+### 2. 触发带返回值异步任务（并发多任务并收集 Future 结果）
+GET {{host}}/async/taskReturnValue?count=10
+Accept: application/json
+
+### 3. 查看虚拟线程状态及执行详情
+GET {{host}}/async/virtualThreadInfo?count=5
+Accept: application/json
